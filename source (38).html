@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.content {
+    display: table-cell;
+    max-width: 100%;
+    min-width: 40%;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    opacity: 1;
+    z-index: 2;
+}
+
+.all {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.name {
+    position: relative;
+    right: -100%;
+    height: 100%;
+    margin: 10% 0 0 0;
+    -webkit-mask-size: 65vh;
+    -webkit-mask-repeat: no-repeat;
+    animation: name 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes name {
+    0% {}
+
+    100% {
+        opacity: 1;
+        right: 0%;
+    }
+
+}
+
+.name1 {
+    -webkit-mask-image: url("https://cdn.discordapp.com/attachments/770088622455652375/1121207072080531618/name1.png");
+}
+
+.name2 {
+    -webkit-mask-image: url("https://cdn.discordapp.com/attachments/770088622455652375/1121207072407699567/name2.png");
+}
+
+.name3 {
+    -webkit-mask-image: url("https://cdn.discordapp.com/attachments/770088622455652375/1121207072739045417/name3.png");
+}
+
+.name4 {
+    -webkit-mask-image: url("https://cdn.discordapp.com/attachments/770088622455652375/1121207073112342528/name4.png");
+}
+
+.name5 {
+    -webkit-mask-image: url("https://cdn.discordapp.com/attachments/770088622455652375/1121207073720512582/name5.png");
+}
+
+.name6 {
+    -webkit-mask-image: url("https://cdn.discordapp.com/attachments/770088622455652375/1121207074282541056/name6.png");
+}</style>
+
+
+</head><body style="background-image: url(&quot;https://cdn.discordapp.com/attachments/770088622455652375/1121242843579682816/pattern11.png&quot;);">
+    <div class="content">
+        <span id="rand">5</span>
+        <span id="secondary" style="background-color: rgb(85, 206, 161);">text</span>
+        <span id="tertiary" style="background-color: rgb(194, 169, 208);">text</span>
+        <div class="name name2" id="namerandon" style="background-color: rgb(93, 87, 75);"></div>
+    </div>
+    <div class="all" id="back" style="background-color: rgb(85, 206, 161);"></div>
+                        <iframe id="music" hidden="" src="https://www.youtube.com/embed/DfQbvhwrsvE?playlist=DfQbvhwrsvE&amp;loop=1&amp;autoplay=1"></iframe>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+
+
+
+<script>var date1 = new Date("06/20/2023");
+var date2 = new Date();
+var timedif = date2.getTime() - date1.getTime();
+var hours = Math.trunc(timedif / 3600000);
+generator = new Math.seedrandom(hours);
+var multi = Math.ceil(generator() * 5);
+generator = new Math.seedrandom(hours * multi);
+document.getElementById("rand").innerHTML = Math.ceil(generator() * 20);
+var colorran = generator()
+var colors1 = new Array("#764847", "#7f9d5c", "#589d8c", "#99abd1", "#9fabdf", "#a2b191", "#5d574b", "#dce1d1", "#e19223")
+var colors2 = new Array("#6a6269", "#6e6c63", "#3e7050", "#99d1b9", "#bf836e", "#e9ebec", "#55cea1", "#0a2a38", "#0e131b")
+var colors3 = new Array("#567095", "#4a3d61", "#545659", "#608ac7", "#4fb5ab", "#20131a", "#c2a9d0", "#d194bf", "#e3e1de")
+var backgrounds = new Array("url(https://cdn.discordapp.com/attachments/770088622455652375/1121236711544979487/pattern1.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121244076386287616/pattern2.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121243794449387570/pattern5.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121243547060936815/pattern6.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121245185133772851/pattern7.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121243254151708763/pattern8.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121243029731278918/pattern9.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121242843579682816/pattern11.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121246230710866061/pattern12.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121236728078938194/pattern13.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121242288115437703/pattern14.png", "url(https://cdn.discordapp.com/attachments/770088622455652375/1121245421151457351/pattern15.png")
+var masktype = new Array("name1", "name2", "name3", "name4", "name5", "name6");
+var color1 = colors1[Math.floor(colorran * colors1.length)]
+var color2 = colors2[Math.floor(colorran * colors2.length)]
+var color3 = colors3[Math.floor(colorran * colors3.length)]
+document.getElementById("namerandon").style.backgroundColor = color1;
+document.getElementById("secondary").style.backgroundColor = color2;
+document.getElementById("tertiary").style.backgroundColor = color3;
+document.getElementById("namerandon").classList.add(masktype[Math.floor(generator() * masktype.length)]);
+document.getElementById("back").style.backgroundColor = color2;
+document.body.style.backgroundImage = backgrounds[Math.floor(generator() * backgrounds.length)];
+document.getElementById("music").setAttribute("src", "https://www.youtube.com/embed/DfQbvhwrsvE?playlist=DfQbvhwrsvE&loop=1&autoplay=1")</script></body>
